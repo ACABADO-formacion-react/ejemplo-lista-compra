@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {    
+    background-color: #f87500;
+}
+.cabecera-contenedor {
+    background-color: #5e81d1;
+}
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+.cabecera h1 {
+    margin: 0;
+    font-size: 1.6em;
+}
+.cabecera nav ul {
+    margin: 0;
+}
+.cabecera nav ul a {
+    color: inherit;
+}
+.cabecera nav ul a.activo {
+    font-weight: bold;
+}
+.titulo-contenedor {    
+    background-color: #95d9df;
+    padding: 10px 0;
+}
+.titulo-seccion h2 {
+    font-size: 1.4em;
+}
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo-seccion i {
+    font-size: 36px;
+    color: #f16b44;
+}
+.lista {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color:#ff8d27;
+    position: relative;
+}
+.lista ul {
+    margin: 0;
+}
+.lista .botonera {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    display: none;
+}
+.lista .botonera i {
+    font-size: 24px;
+    color: #f16b44;
+    margin-left: 10px;
+}
+.lista:hover .botonera {
+    display: block;
+}
+.info-contenedor {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f87500;
+}
+.info .total {
+    font-size: 1.5em;
+}
+.lista .articulos .articulo {
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    line-height: 2em;
+}
+.lista .articulos .articulo:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+}
+.lista .articulos .articulo > * {
+    flex: 1;
+}
+.lista .articulos .articulo > input[type=checkbox] {
+    flex: 0 0 20px;
+    height: 24px;
+    margin-right: 10px;
+}
+.lista .articulos .articulo > .icono {
+    flex: 0 0 40px;
+    text-align: right;
+    font-size: 24px;
+}
+.lista .articulos .total {
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+.lista .articulos .comprado .nombre {
+    text-decoration: line-through;
+}
+.accion a {
+    color: inherit;
+    font-size: 32px;
+    text-decoration: none;
+}
+.accion a:hover {
+    opacity: 0.8;
+}
+form h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+input[type=text], input[type=number] {
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+button {
+    border: none;
+    background-color: #5e81d1;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:disabled {
+    opacity: 0.5;
+}
+.editar-articulo button[type=submit] {
+    display: block;
+    margin-top: 20px;
 }
