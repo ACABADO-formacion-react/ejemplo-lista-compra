@@ -17,13 +17,24 @@ body {
     margin: 0;
     font-size: 1.6em;
 }
-.cabecera nav ul {
+.cabecera nav ul, .menu-principal ul {
     margin: 0;
 }
 .cabecera nav ul a {
     color: inherit;
 }
 .cabecera nav ul a.activo {
+    font-weight: bold;
+}
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menu-principal a {
+    color: inherit;
+}
+.menu-principal a.activo {
     font-weight: bold;
 }
 .titulo-contenedor {    
@@ -153,4 +164,51 @@ button:disabled {
 .editar-articulo button[type=submit] {
     display: block;
     margin-top: 20px;
+}
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+}
+.spinner .path {
+    stroke: #5e81d1;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}  
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
 }
