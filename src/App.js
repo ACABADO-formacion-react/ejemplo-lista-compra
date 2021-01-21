@@ -1,9 +1,6 @@
 import { lazy, Suspense } from "react";
 import { NavLink, Redirect, Route, Switch } from "react-router-dom";
 import { HomePage } from "./componentes/pages/HomePage";
-//import { AboutPage } from "./componentes/pages/AboutPage";
-//import { ListaPage } from "./componentes/pages/ListaPage";
-//import { NotFoundPage } from "./componentes/pages/NotFoundPage";
 
 const AboutPage = lazy(() => import("./componentes/pages/AboutPage"));
 const ListaPage = lazy(() => import("./componentes/pages/ListaPage"));

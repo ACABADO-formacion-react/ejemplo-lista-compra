@@ -3,10 +3,10 @@ import { ArticulosContext } from "./ArticulosContext"
 
 export const ArticulosContextProvider = ({ children }) => {
 
-    //const { getArticulos, setArticulos, error, cargando } = useArticulos();
+    const { getArticulos, setArticulos, error, cargando } = useArticulos();
 
     return (
-        <ArticulosContext.Provider value={"hola"}>
+        <ArticulosContext.Provider value={{ getArticulos, setArticulos, error, cargando }}>
             {children}
         </ArticulosContext.Provider>
     )

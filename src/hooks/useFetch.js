@@ -15,7 +15,7 @@ export const useFetch = (
     useEffect(() => {
         (async () => {
             try {
-                const resp = await fetch(url, config);
+                const resp = await fetch(url);
                 const articulosAPI = await resp.json();
                 accion(articulosAPI);
             } catch (err) {
@@ -24,7 +24,7 @@ export const useFetch = (
                 setCargando(false);
             }
         })();
-    }, [url, accion, config]);
+    }, [url, accion]);
 
     return { error, cargando }
 }
